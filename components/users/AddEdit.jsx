@@ -26,8 +26,13 @@ function AddEdit(props) {
         email: Yup.string()
             .email('Email is invalid')
             .required('Email is required'),
-        role: Yup.string()
-            .required('Role is required'),
+        phoneNo: Yup.string()
+            // .phoneNo('Phone no is invalid')
+            .required('Phone no required'),
+            
+        address: Yup.string()
+            // .phoneNo('Phone no is invalid')
+            .required('Phone no required'),
         password: Yup.string()
             .transform(x => x === '' ? undefined : x)
             .concat(isAddMode ? Yup.string().required('Password is required') : null)
@@ -76,17 +81,15 @@ function AddEdit(props) {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="add-user-form">
             <h1>{isAddMode ? 'Add User' : 'Edit User'}</h1>
             <div className="form-row">
-                <div className="form-group col">
+                <div className="form-group col-2">
                     <label>Title</label>
                     <select name="title" {...register('title')} className={`form-control ${errors.title ? 'is-invalid' : ''}`}>
                         <option value=""></option>
                         <option value="Mr">Mr</option>
-                        <option value="Mrs">Mrs</option>
                         <option value="Miss">Miss</option>
-                        <option value="Ms">Ms</option>
                     </select>
                     <div className="invalid-feedback">{errors.title?.message}</div>
                 </div>
@@ -107,7 +110,17 @@ function AddEdit(props) {
                     <input name="email" type="text" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} />
                     <div className="invalid-feedback">{errors.email?.message}</div>
                 </div>
-                <div className="form-group col">
+                <div className="form-group col-7">
+                    <label>Phone Number</label>
+                    <input name="number" type="number" {...register('phoneNo')} className={`form-control ${errors.phoneNo ? 'is-invalid' : ''}`} />
+                    <div className="invalid-feedback">{errors.phoneNo?.message}</div>
+                </div>
+                <div className="form-group col-7">
+                    <label>Address</label>
+                    <textarea name="address" rows="3" type="text" {...register('address')} className={`form-control ${errors.address ? 'is-invalid' : ''}`} />
+                    <div className="invalid-feedback">{errors.address?.message}</div>
+                </div>
+                {/* <div className="form-group col">
                     <label>Role</label>
                     <select name="role" {...register('role')} className={`form-control ${errors.role ? 'is-invalid' : ''}`}>
                         <option value=""></option>
@@ -115,7 +128,7 @@ function AddEdit(props) {
                         <option value="Admin">Admin</option>
                     </select>
                     <div className="invalid-feedback">{errors.role?.message}</div>
-                </div>
+                </div> */}
             </div>
             {!isAddMode &&
                 <div>
@@ -143,12 +156,12 @@ function AddEdit(props) {
                     <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
                 </div>
             </div>
-            <div className="form-group">
-                <button type="submit" disabled={formState.isSubmitting} className="btn btn-primary mr-2">
+            <div className="form-btns">
+                <button type="submit" disabled={formState.isSubmitting} className="btn btn-sub">
                     {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                     Save
                 </button>
-                <button onClick={() => reset(formOptions.defaultValues)} type="button" disabled={formState.isSubmitting} className="btn btn-secondary">Reset</button>
+                <button onClick={() => reset(formOptions.defaultValues)} type="button" disabled={formState.isSubmitting} className="btn btn-rst">Reset</button>
                 <Link href="/users" className="btn btn-link">Cancel</Link>
             </div>
         </form>
