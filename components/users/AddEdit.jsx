@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-
+import "yup-phone";
 import { Link } from 'components';
 import { userService, alertService } from 'services';
 
@@ -27,8 +27,7 @@ function AddEdit(props) {
             .email('Email is invalid')
             .required('Email is required'),
         phoneNo: Yup.string()
-            // .phoneNo('Phone no is invalid')
-            .required('Phone no required'),
+            .phone(null, true, "invalid phone number").required(' Phone number required'),
             
         address: Yup.string()
             // .phoneNo('Phone no is invalid')
@@ -82,7 +81,7 @@ function AddEdit(props) {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="add-user-form">
-            <h1>{isAddMode ? 'Add User' : 'Edit User'}</h1>
+            <h1>{isAddMode ? 'Add New Student' : 'Edit Student'}</h1>
             <div className="form-row">
                 <div className="form-group col-2">
                     <label>Title</label>

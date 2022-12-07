@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { Link } from 'components';
 import { userService } from 'services';
+import { FaRegEdit,FaTrashAlt } from "react-icons/fa";
 
 export default Index;
 
@@ -45,11 +46,11 @@ function Index() {
                             <td>{user.phoneNo}</td>
                             <td>{user.address}</td>
                             <td style={{ whiteSpace: 'nowrap' }}>
-                                <Link href={`/users/edit/${user.id}`} className="btn btn-sm btn-primary mr-1">Edit</Link>
+                                <Link href={`/users/edit/${user.id}`} className="btn edit-btn mr-1"><FaRegEdit /> </Link>
                                 <button onClick={() => deleteUser(user.id)} className="btn btn-sm btn-danger btn-delete-user" disabled={user.isDeleting}>
                                     {user.isDeleting 
                                         ? <span className="spinner-border spinner-border-sm"></span>
-                                        : <span>Delete</span>
+                                        : <span><FaTrashAlt/></span>
                                     }
                                 </button>
                             </td>

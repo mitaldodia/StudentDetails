@@ -13,7 +13,7 @@ a { cursor: pointer; }
 }
 .student-detail-btn {
     max-width: 400px;
-    background-color: #000;
+    background-color: #8c33dc;
     padding: 20px;
     margin: 30px 0;
 }
@@ -27,9 +27,19 @@ a { cursor: pointer; }
 
 }
 .btn-delete-user {
-    width: 40px;
     text-align: center;
-    box-sizing: content-box;
+    border: 0;
+    color: red;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.edit-btn{
+    text-align: center;
+    border: 0;
+    color: green;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
 }
 .all-contains {
     margin-top: 100px;
@@ -55,6 +65,8 @@ a { cursor: pointer; }
     font-size: 18px;
     font-family: sans-serif;
     font-weight: 500;
+    color: #000;
+    padding: 24px 10px;
 }
 a.btn.btn-sm.btn-success.mb-2.new-add-st {
     background-color: #17a104;
@@ -87,6 +99,8 @@ form.add-user-form {
 .form-control {
     width: 100%;
     padding: 12px 0 12px 6px;
+    font-size: 18px;
+    margin: 8px 0;
 }
 .form-btns {
     display: flex;
@@ -128,4 +142,24 @@ color: #ddd;
     text-align: center;
     font-size: 42px;
     text-transform: capitalize;
+}
+.invalid-feedback {
+    color: red;
+    font-size: 16px;
+}
+.header-details {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.scholl-detail h2{
+    font-size: 30px;
+    font-family: cursive;
+    margin: 10px 0;
+}
+.porfile-detail svg{
+    font-size: 50px;
 }

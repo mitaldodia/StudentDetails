@@ -10,5 +10,17 @@
         "id": 1,
         "dateCreated": "2022-12-06T12:09:39.389Z",
         "dateUpdated": "2022-12-06T12:09:39.389Z"
+    },
+    {
+        "title": "Mr",
+        "firstName": "m",
+        "lastName": "dgdg",
+        "email": "franzk.murphy@rustvale.com",
+        "phoneNo": "1234567890",
+        "address": "gfbcbcbcbc",
+        "password": "mital123",
+        "id": 3,
+        "dateCreated": "2022-12-07T06:04:33.376Z",
+        "dateUpdated": "2022-12-07T06:04:33.376Z"
     }
 ]
