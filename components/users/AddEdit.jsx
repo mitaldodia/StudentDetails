@@ -14,6 +14,8 @@ function AddEdit(props) {
     const isAddMode = !user;
     const router = useRouter();
     const [showPassword, setShowPassword] = useState(false);
+    const cors = require('cors');
+    app.use(cors());
     
     // form validation rules 
     const validationSchema = Yup.object().shape({

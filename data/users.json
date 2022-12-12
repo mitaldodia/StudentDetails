@@ -1,14 +1,38 @@
 [
     {
+        "title": "Miss",
+        "firstName": "mital",
+        "lastName": "dodia",
+        "email": "mdodia@kernshell.com",
+        "phoneNo": "2242424",
+        "address": "c c ccc ",
+        "password": "mmmmmm",
+        "id": 1,
+        "dateCreated": "2022-12-06T12:09:39.389Z",
+        "dateUpdated": "2022-12-06T12:09:39.389Z"
+    },
+    {
         "title": "Mr",
-        "firstName": "Frankfggd",
-        "lastName": "Murphy",
-        "email": "frank.murphy@rustvale.com",
+        "firstName": "m",
+        "lastName": "dgdg",
+        "email": "franzk.murphy@rustvale.com",
         "phoneNo": "1234567890",
-        "address": "ssddadadada",
-        "password": "123456789",
+        "address": "gfbcbcbcbc",
+        "password": "mital123",
+        "id": 3,
+        "dateCreated": "2022-12-07T06:04:33.376Z",
+        "dateUpdated": "2022-12-07T06:04:33.376Z"
+    },
+    {
+        "title": "Mr",
+        "firstName": "bcbc",
+        "lastName": "bcb",
+        "email": "mbvn@gmail.com",
+        "phoneNo": "1212221121",
+        "address": "vgvvcvc",
+        "password": "111111",
         "id": 4,
-        "dateCreated": "2022-12-08T12:53:41.958Z",
-        "dateUpdated": "2022-12-08T12:54:22.570Z"
+        "dateCreated": "2022-12-12T12:10:28.533Z",
+        "dateUpdated": "2022-12-12T12:10:28.533Z"
     }
 ]

@@ -11,6 +11,7 @@ export const userService = {
 
 const baseUrl = `${apiUrl}/users`;
 
+
 function getAll() {
     return fetchWrapper.get(baseUrl);
 }
